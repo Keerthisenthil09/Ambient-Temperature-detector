@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambient Temperature Estimation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ambient Temperature Estimation</h1>
+
+        <div id="controls">
+            <div class="control-group">
+                <label for="day">Select a Day:</label>
+                <input type="date" id="day" value="2024-02-21">
+            </div>
+
+            <div class="control-group">
+                <label for="time">Select a Time:</label>
+                <input type="time" id="time" value="12:00">
+            </div>
+
+            <button onclick="plotGraph()">Plot Graph</button>
+        </div>
+
+        <div id="graph-container">
+            <canvas id="temperature-chart"></canvas>
+        </div>
+
+        <p id="ambient-temperature"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
